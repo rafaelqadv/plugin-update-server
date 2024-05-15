@@ -1,0 +1,65 @@
+.blog-lr-template { 
+    margin: 24px 0;
+    padding: 10px; 
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc;
+    display: flex;
+    position: relative;
+}
+.blog-lr-template.reverse {
+    flex-direction: row-reverse;
+}
+.blog-lr-template > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.blog-lr-template .lr-left{
+    padding: 0 16px;
+}
+.image-placeholder {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    cursor: pointer;
+}
+.image-placeholder:hover {
+    background: rgba(0,0,0,0.1)
+}
+.cta-btn {
+    display: inline-block;
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid black;
+    color: #000;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 4px 16px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+.blog-lr-template > .blog-lr-delete-btn {
+    display: none;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid red;
+    background: #f009;
+    font-size: 24px;
+    width: fit-content !important;
+    height: fit-content;
+    z-index: 1000;
+    font-weight: 900;
+    line-height: 100%;
+    padding: 0px 3px 0 4px;
+}
+.blog-lr-template:hover > .blog-lr-delete-btn {
+    display: block;
+}
