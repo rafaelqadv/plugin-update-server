@@ -2,7 +2,7 @@
 /*
 Plugin Name: RVADV Template Buttons for Blog Posts
 Description: Adds custom template buttons to the post editor to insert predefined HTML snippets.
-Version: 1.0.3
+Version: 1.0
 Author: Rafael Q
 Author URI: http://rvadv.com
 */
