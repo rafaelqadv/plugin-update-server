@@ -55,6 +55,8 @@ function tbf_deactivate_plugin() {
 
 // ------------------------------------------
 // Plugin update checker to the update server
+$update_url = 'https://rvadv-plugin-update-server.netlify.app/rvadv_post-templates/update-server.json';
+
 add_filter('pre_set_site_transient_update_plugins', 'check_for_plugin_update');
 function check_for_plugin_update($transient) {
     if (empty($transient->checked)) {
@@ -64,7 +66,6 @@ function check_for_plugin_update($transient) {
     $plugin_slug = 'rvadv_post-templates';
     $current_version = $transient->checked["$plugin_slug/$plugin_slug.php"];
 
-    $update_url = 'https://rvadv-post-template-plugin-server.netlify.app/update-server.json';
 
     $response = wp_remote_get($update_url);
     if (is_wp_error($response) || wp_remote_retrieve_response_code($response) != 200) {
@@ -93,8 +94,6 @@ function plugin_update_info($res, $action, $args) {
         return $res;
     }
 
-    $update_url = 'https://rvadv-post-template-plugin-server.netlify.app/update-server.json';
-
     $response = wp_remote_get($update_url);
     if (is_wp_error($response) || wp_remote_retrieve_response_code($response) != 200) {
         return $res;
@@ -118,3 +117,5 @@ function plugin_update_info($res, $action, $args) {
 
     return $res;
 }
+// ------------------------------------------
+// ------------------------------------------
