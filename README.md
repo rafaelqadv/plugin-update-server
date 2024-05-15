@@ -1,2 +1,2 @@
 # plugin-update-server
-Plugin update server for plugins
+Update server for RVADV plugins
